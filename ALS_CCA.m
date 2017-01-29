@@ -35,5 +35,5 @@ for t = 1:T
     u = u_tilde/sqrt((u_tilde'*X)*(X'*u_tilde)/N+r_x*norm(u_tilde)^2);
     v = v_tilde/sqrt((v_tilde'*Y)*(Y'*v_tilde)/N+r_y*norm(v_tilde)^2);
 end
-sigma = (u'*X)*(Y'*v)/N;
+sigma = abs((u'*X)*(Y'*v)/N);
 end
